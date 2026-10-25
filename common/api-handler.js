@@ -199,8 +199,9 @@ class APIController {
 
   async createBill(req, res, next) {
     try {
-      const { userId, products, isTaxApplied, taxAppliedPercent, paidStatus } =
+      const {products, isTaxApplied, taxAppliedPercent, paidStatus } =
         req.body;
+      const userId = req.user.id;
       
 
       const result = await this.billingService.createBill(

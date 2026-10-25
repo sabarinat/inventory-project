@@ -51,7 +51,7 @@ const validate = (schema, property = 'body') => {
 };
 
 const createBillSchema = Joi.object({
-  userId: Joi.number().integer().positive().required(),
+  
 
   isTaxApplied: Joi.boolean().required(),
 
